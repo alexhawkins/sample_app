@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ruby on Rails Tutorial | <%= yield(:title) %></title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
+	<title>Ruby on Rails Tutorial | <%= yield(:title) %></title>
+	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	<%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+	<%= yield %>
 
+	<p>
+		This is the generic page for the <a href="http://mackenziehawkins.com/">Spuds Mackenzie &amp; Balboa Hawkins website</a> 
+	</p>
+	<p>
+		<a href="/static_pages/about/">ABOUT</a>
+	</p>
+	<p>
+		<a href="/static_pages/help/">HELP</a>
+	</p>
+	<p>
+		<a href="/static_pages/home/">HOME</a>
+	</p>
+	<p>
+		<a href="/static_pages/contact/">CONTACT</a>
+	</p>
 </body>
 </html>
