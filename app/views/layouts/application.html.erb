@@ -1,29 +1,49 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title><%= full_title(yield(:title))%></title>
-	<%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" =>true %>
-	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-	<%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
+		<title><%= full_title(yield(:title))%></title>
+		<%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" =>true %>
+		<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+		<%= csrf_meta_tags %>
+		<!--[if lt IE 9]>
+	    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	    <![endif]-->
+	</head>
 
-	<%= yield %>
+	<body>
+		<header class="navbar navbar-fixed-top navbar-inverse">
+			<div class="navbar-inner">
+				<div class="container">
+					<%= link_to "sample_app", '#', id: "logo" %>
+					<nav>
+						<ul class="nav pull-right">
+							<li><%= link_to "Home", '#' %></li>
+							<li><%= link_to "Help", '#' %></li>
+							<li><%= link_to "Sign In", '#' %></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
 
-	<p>
-		This is the generic page for the <a href="http://mackenziehawkins.com/">Spuds Mackenzie &amp; Balboa Hawkins website</a> 
-	</p>
-	<p>
-		<a href="/static_pages/about/">ABOUT</a>
-	</p>
-	<p>
-		<a href="/static_pages/help/">HELP</a>
-	</p>
-	<p>
-		<a href="/static_pages/home/">HOME</a>
-	</p>
-	<p>
-		<a href="/static_pages/contact/">CONTACT</a>
-	</p>
-</body>
+		<div class="container">
+			<%= yield %>
+
+			<p>
+				This is the generic page for the <a href="http://mackenziehawkins.com/">Spuds Mackenzie &amp; Balboa Hawkins website</a> 
+			</p>
+			<p>
+				<a href="/static_pages/about/">ABOUT</a>
+			</p>
+			<p>
+				<a href="/static_pages/help/">HELP</a>
+			</p>
+			<p>
+				<a href="/static_pages/home/">HOME</a>
+			</p>
+			<p>
+				<a href="/static_pages/contact/">CONTACT</a>
+			</p>
+		</div>
+	</body>
 </html>
