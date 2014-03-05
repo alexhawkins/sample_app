@@ -6,6 +6,16 @@ $middleGray: #555;
 $darkGray: #222;
 $greyMediumLight: #bababa;
 
+$darkPurple: #1B1B24;
+$lightPurple: #464368;
+$bluePurpletText: #7C76B8;
+$greyPurpleText: #7A7A8A;
+$blueLinks: #00AFED;
+$darkPurpleBorder: #2F2F3E;
+$logoPurple: #B1AEC8;
+
+
+
 @mixin box_sizing {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -29,7 +39,23 @@ html {
 
 body{
 	padding-top: 60px;
-	background-color: $white;
+	background-color: $darkPurple;
+
+	a  {
+		color: $blueLinks;
+		&:hover{
+			color: white;
+		}
+	}
+	.hero-unit {
+		background-color: $lightPurple;
+		h1 {
+			color: white;
+		}
+		h2 {
+			color: $bluePurpletText;
+		}
+	}
 }
 
 section {
@@ -51,6 +77,7 @@ textarea {
 
  h1, h2, h3, h4, h5, h6 {
  	line-height: 1;
+ 	color: $bluePurpletText;
  }
 
  h1 {
@@ -66,7 +93,7 @@ textarea {
  	margin-bottom: 30px;
  	text-align: center;
  	font-weight: normal;
- 	color: $lightGray;
+ 	color: white;
  }
 
  p {
@@ -80,7 +107,7 @@ textarea {
 	float: left;
 	margin-right: 10px;
 	font-size: 1.7em;
-	color: $white;
+	color: $logoPurple;
 	text-transform: uppercase;
 	letter-spacing: -1px;
 	padding-top: 9px;
@@ -97,14 +124,9 @@ textarea {
 footer {
 	margin-top: 45px;
 	padding: 10px 0;
-	border-top: 1px solid $greyMediumLight;
-	color: $lightGray;
-	a{
-		color: $middleGray;
-		&:hover{
-			color: $darkGray;
-		}
-	}
+	border-top: 1px solid $darkPurpleBorder;
+	color: $greyPurpleText;
+
 	small{
 		float:left;
 	}
@@ -116,6 +138,14 @@ footer {
 			margin-left: 10px;
 		}
 	}
+	a{
+		color: $greyPurpleText;
+		&:hover{
+			color: white;
+		}
+
+	}
+	
 }
 
 /* sidebar */
@@ -123,7 +153,7 @@ footer {
 aside {
 	section{
 		padding: 10px 0;
-		border-top: 1px solid  $lightGray;
+		border-top: 1px solid $bluePurpletText;
 		&:first-child {
 			border: 0;
 			padding-top: 0;
@@ -158,9 +188,27 @@ input, textarea, select, .uneditable-input {
 	@include box_sizing;
 }
 
+label {
+	color: $bluePurpletText;
+}
+
 input {
 	height: auto !important;
 }
+.btn-right {
+	margin-top: 10px;
+}
 
+/* navigation */
+
+.navbar-inverse {
+	.nav > li > a {
+		color: $greyPurpleText;
+	}	
+}
+
+.navbar-fixed-top .container {
+	background-color: transparent;
+}
 
 
