@@ -21,7 +21,7 @@ $logoPurple: #B1AEC8;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
-
+/* debub */
 .debug_dump {
 	clear: both;
 	float: left;
@@ -188,6 +188,12 @@ input, textarea, select, .uneditable-input {
 	@include box_sizing;
 }
 
+input[type="text"], input[type="password"]{
+	background-color: $darkPurpleBorder;
+	border-color: $greyPurpleText;
+	color: $greyPurpleText;
+}
+
 label {
 	color: $bluePurpletText;
 }
@@ -211,4 +217,34 @@ input {
 	background-color: transparent;
 }
 
+/* errors */
 
+#error_explanation {
+	color: $blueLinks;
+	ul {
+		list-style: none;
+		margin: 0 0 18px 0;
+	}
+}
+
+.field_with_errors {
+	/*notice how we are using the Sass @extend function to include
+	  the functionality of two Bootstap classes, control-group 
+	  and error */
+	@extend .control_group;
+	@extend .error;
+}
+
+.alert-error {
+	border: none;
+	text-shadow: none;
+	color: white;
+	background-color: $blueLinks;
+}
+
+ .alert-success {
+ 	border: none;
+	text-shadow: none;
+	color: white;
+	background-color: $blueLinks;
+ }
